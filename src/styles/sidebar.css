@@ -1,0 +1,26 @@
+.side_bar {
+  /* flex-grow: 0.5; */
+}
+
+.side_bar .side_step_1 {
+  width: calc(100% - 21px);
+  height: 300px;
+}
+
+.side_bar .side_step_1 select,
+.side_bar .side_step_1 input {
+  margin-bottom: 25px;
+}
+
+/* ============================= */
+.side_bar .side_step_2 {
+  background-color: #E9EEF8;
+  width: calc(100% - 14px);
+  height: 500px;
+}
+
+.side_bar .side_step_3 {
+  background-color: #E9EEF8;
+  width: calc(100% - 14px);
+  height: 500px;
+}

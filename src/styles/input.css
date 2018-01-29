@@ -1,0 +1,41 @@
+.input, select, option {
+  height: 60px;
+  background-color: #ECEFF5;
+  outline: none;
+  border-radius: 3px;
+  border-width: 1px;
+  font-size: 16px;
+  border-color: transparent;
+}
+
+.input, select {
+  box-sizing: border-box;
+}
+
+.input:hover,
+select:hover {
+  border-color: #7A9CD3;
+}
+
+.input {
+  width: 100%;
+  padding: 0 14px;
+}
+
+select {
+  width: 100%;
+  padding: 0 14px;
+  appearance: none;
+}
+
+.select {
+  position: relative;
+}
+
+.select::after {
+  content: 'Программа';
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  font-size: 14px;
+}
