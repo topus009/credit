@@ -3,7 +3,7 @@ import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import Header from '../components/Header';
 import SideBar from '../components/SideBar';
-import * as appActions from '../actions/AppActions';
+import * as appActionsTypes from '../actions/AppActions';
 
 class App extends Component {
   constructor(props) {
@@ -19,15 +19,23 @@ class App extends Component {
   // }
 
   render() {
-    const {step} = this.props;
+    const {
+      step,
+      appActions,
+    } = this.props;
     // const {} = this.state;
-    // const {} = appActions;
+    const {
+      check_step_1,
+    } = appActions;
 
     return (
       <div>
         <Header step={step}/>
         <div className='wrapper'>
-          <SideBar step={step}/>
+          <SideBar
+            step={step}
+            check_step_1={check_step_1}
+          />
           <div className='content'>BLOCK</div>
         </div>
       </div>
@@ -46,7 +54,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    appActions: bindActionCreators(appActions, dispatch),
+    appActions: bindActionCreators(appActionsTypes, dispatch),
   }
 };
 

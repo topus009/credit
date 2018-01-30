@@ -4,6 +4,7 @@ const Btn = (props) => {
   const {
     title,
     type,
+    handleClick,
   } = props;
 
   const styles = {
@@ -25,6 +26,7 @@ const Btn = (props) => {
     <div
       className='btn'
       style={styles[type]}
+      onClick={handleClick}
     >
       {title}
     </div>

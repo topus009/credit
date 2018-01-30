@@ -26,6 +26,8 @@
     "arrow-body-style":"off",
     "global-require": "off",
     "eol-last":"off",
-    "comma-spacing": "off"
+    "comma-spacing": "off",
+    "camelcase":"off",
+    "block-spacing":"off"
   }
 }

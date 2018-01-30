@@ -7,7 +7,7 @@
   height: 300px;
 }
 
-.side_bar .side_step_1 select,
+.side_bar .side_step_1 .select,
 .side_bar .side_step_1 input {
   margin-bottom: 25px;
 }

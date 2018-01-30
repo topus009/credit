@@ -1,27 +1,19 @@
-// import { 
-//     DELETE,
-// } from '../constants/App';
+import {
+  CHECK_STEP_1,
+} from '../constants/App';
 
-export function deleteTask(day, id) {
-  return dispatch => {
+export function check_step_1() {
+  return (dispatch) => {
     dispatch({
-      // type: DELETE,
-      payload: {
-        day,
-        id,
-      },
+      type: CHECK_STEP_1,
     });
   }
 }
 
-export function deleteTask1(day, id) {
-  return dispatch => {
+export function check_step_2() {
+  return (dispatch) => {
     dispatch({
-      // type: DELETE,
-      payload: {
-        day,
-        id,
-      },
+      // type: CHECK_STEP_2,
     });
   }
 }

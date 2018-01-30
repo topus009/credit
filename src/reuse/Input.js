@@ -1,53 +1,98 @@
-import React, {Component} from 'react';
+import React,{Component} from 'react';
+import {bindActionCreators} from 'redux';
+import {connect} from 'react-redux';
+import * as InputActionsTypes from '../actions/InputActions';
 
-// class Input extends Component {
-//   constructor(props) {
-//     super(props);
-//     // this.selectDay = this.selectDay.bind(this);
-//     this.state = {
-//       // step: 0,
-//     }
-//   }
-//   render() {
-//     return (
+class Input extends Component {
+  constructor(props) {
+    super(props);
+    // this.handle_input = this.handle_input.bind(this);
+    this.state = {
+      // select: '',
+    }
+  }
 
-//     )
+  // handle_input(input_name,event) {
 
-//   }
-// }
+  // }
 
+  render() {
+    const {
+      type,
+      placeholder,
+      input_name,
+      values,
+      input,
+      credit,
+      InputActions,
+    } = this.props;
+    console.warn(credit);
+    // const {
+    //   price,
+    //   time,
+    // } = credit;
 
-const Input = (props) => {
-  const {
-    type,
-    placeholder,
-    values,
-  } = props;
+    const {
+      toggle_select,
+      select_type,
+      handle_input,
+    } = InputActions;
 
-  const input =
-    <input
-      className={type}
-      placeholder={placeholder}
-    />;
+    const inputBlock =
+      <input
+        name={input_name}
+        className={type}
+        placeholder={placeholder}
+        onChange={(event) => {handle_input(input_name,event)}}
+        value={credit[input_name] !== '' ? credit[input_name] : ''}
+      />;
 
-  const select =
-    <div className={type}>
-      <select>
-        <option></option>
+    const selectBlock =
+      <div
+        className={type + (input.visible ? ' select_border' : '')}
+        onClick={() => {
+          toggle_select();
+        }}
+      >
+        {input.text}
         {values && values.map((e,i) => {
           return (
-            <option
-              key={'select_option_' + i} 
-              value={e}
+            <div
+              key={`${type}_${i}`} 
+              className={type + '_li ' + (!input.visible ? 'hidden' : '')}
+              onClick={(event) => {
+                event.stopPropagation();
+                event.preventDefault();
+                select_type(e);
+                toggle_select();
+              }}
             >
             {e}
-            </option>
+            </div>
           )
         })}
-      </select>
-    </div>;
+        <div className={type + '_placeholder ' + (input.text.length !== 0 ? 'hidden' : '')}>Программа</div>
+      </div>;
 
-  return type === 'input' ? input : select
+    return type === 'input' ? inputBlock : selectBlock
+  }
+}
+
+const mapStateToProps = (state) => {
+  const {
+    input,
+    credit,
+  } = state.app;
+  return {
+    input,
+    credit,
+  }
 };
 
-export default Input;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    InputActions: bindActionCreators(InputActionsTypes, dispatch),
+  }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Input);

@@ -1,41 +1,78 @@
-.input, select, option {
+.input,
+.select,
+.select_li {
   height: 60px;
+  width: calc(100%);
+  padding: 0 14px;
   background-color: #ECEFF5;
-  outline: none;
   border-radius: 3px;
-  border-width: 1px;
+  border: 1px solid transparent;
   font-size: 16px;
-  border-color: transparent;
-}
-
-.input, select {
   box-sizing: border-box;
 }
 
-.input:hover,
-select:hover {
-  border-color: #7A9CD3;
-}
-
-.input {
-  width: 100%;
-  padding: 0 14px;
-}
-
-select {
-  width: 100%;
-  padding: 0 14px;
-  appearance: none;
+.input:focus {
+  outline: none;
 }
 
 .select {
   position: relative;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 60px;
 }
 
-.select::after {
-  content: 'Программа';
+.select_li {
   position: absolute;
-  top: 12px;
+  left: -1px;
+  width: calc(100% + 2px);
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.input:hover,
+.select:hover,
+.select_li:hover {
+  background-color: #CDCDCD;
+}
+
+.select.select_border:hover {
+  background-color: #ECEFF5;
+}
+
+.select_li:nth-child(1) {
+  top: calc(59px);
+  border-left-color: #CDCDCD;
+  border-right-color: #CDCDCD;
+}
+
+.select_li:nth-child(2) {
+  top: calc(59px*2);
+  border-bottom-color: #CDCDCD;
+  border-left-color: #CDCDCD;
+  border-right-color: #CDCDCD;
+
+}
+
+.select_placeholder {
+  position: absolute;
+  top: -12px;
   left: 10px;
   font-size: 14px;
+  z-index: 1;
+}
+
+.hidden {
+  display: none;
+}
+
+.select_border {
+  border-left-color: #CDCDCD;
+  border-right-color: #CDCDCD;
+  border-top-color: #CDCDCD;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
