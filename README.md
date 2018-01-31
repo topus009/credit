@@ -4,7 +4,11 @@
 
 `Живой пример` доступен по [ссылке][link01].
 
-![preview]
+![preview1]
+-
+![preview2]
+-
+![preview3]
 
 [repo]: <https://github.com/topus009/credit>
 [link01]: <https://topus009.github.io/credit/>
