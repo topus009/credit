@@ -8,4 +8,6 @@
 
 [repo]: <https://github.com/topus009/credit>
 [link01]: <https://topus009.github.io/credit/>
-[preview]: <https://github.com/topus009/credit/ets/1.jpg>
+[preview1]: <https://github.com/topus009/ets/credit1.jpg>
+[preview2]: <https://github.com/topus009/ets/credit2.jpg>
+[preview3]: <https://github.com/topus009/ets/credit3.jpg>
