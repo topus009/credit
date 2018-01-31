@@ -11,7 +11,7 @@
 ![preview3]
 
 [repo]: <https://github.com/topus009/credit>
-[link01]: <https://topus009.github.io/credit/>
+[link01]: <https://topus009.github.io/credit_review/>
 [preview1]: <https://topus009.github.io/ets/credit1.jpg>
 [preview2]: <https://topus009.github.io/ets/credit2.jpg>
 [preview3]: <https://topus009.github.io/ets/credit3.jpg>
