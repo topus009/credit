@@ -1,5 +1,5 @@
 .content {
-  background: #FFC9C9;
+  /* background: #FFC9C9; */
 }
 
 .content .content_1 {
@@ -15,7 +15,63 @@
 .content .content_2 {
   display: flex;
   justify-content: space-around;
+  padding: 0 14px;
 }
 
+.content .content_2 .conent_section {
+  width: 100%;
+}
 
+.content .content_2 .conent_section .pie_article {
+  text-align: center;
+  font-size: 21px;
+  margin-top: 10px;
+  margin-bottom: 19px;
+}
 
+.content .content_2 .conent_section .pie_article .pie_title:last-child {
+  margin-top: 4px;
+}
+
+.content .content_2 .conent_section .range_block .range_title {
+  font-size: 20px;
+  margin-left: 14px;
+}
+
+.content .content_2 .conent_section .range_block .range {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.content .content_2 .conent_section .range_block .range .range_value {
+  font-size: 34px;
+  margin-left: 11px;
+  margin-top: 20px;
+  line-height: 25px;
+}
+
+.content .content_2 .conent_section .range_block .range .customRangeThumb {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 10px 18px 10px;
+  border-color: transparent transparent #34C3D3 transparent;
+  margin-top: 6px;
+  margin-left: -6px;
+}
+
+.content .content_2 .conent_section .btn {
+  width: 85%;
+  margin: 0 auto;
+  margin-top: 45px;
+  display: block;
+}
+
+/* ============================ */
+
+.content .content_3 {
+  /* display: flex;
+  justify-content: space-around;
+  padding: 0 14px; */
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 import Content1 from './Content/Content1';
 import Content2 from './Content/Content2';
-// import Content3 from './Content/Content3';
+import Content3 from './Content/Content3';
 
 const Content = (props) => {
   const {
@@ -17,8 +17,8 @@ const Content = (props) => {
               return <Content1 />;
             case 2:
               return <Content2 />;
-            // case 3:
-            //   return <SideStep3 />;
+            case 3:
+              return <Content3 />;
             default:
               return null;
           }

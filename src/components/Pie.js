@@ -1,13 +1,32 @@
-import React from 'react';
+import React, {Component} from 'react';
+import PieChart from 'react-minimal-pie-chart';
 
-const Pie = () => {
-  return (
-    <div className='pie_block'>
-      <div className='pie' data-start='0' data-value='100'></div>
-      <div className='pie big' data-start='100' data-value='260'></div>
-      <div className='overflow'></div>
-    </div>
-  )
-};
+class Pie extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: [
+        { value: 25, key: 1, color: '#32C4D1' },
+        { value: 75, key: 2, color: '#E9EDF0' },
+      ],
+    }
+  }
+
+  render() {
+    const {data} = this.state;
+    return (
+      <div className='pie_block'>
+        <PieChart
+          data={data}
+          lineWidth={50}
+          paddingAngle={2}
+          radius={48}
+          startAngle={-90}
+          totalValue={100}
+        />
+      </div>
+    )
+  }
+}
 
 export default Pie;
