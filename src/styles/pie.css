@@ -1,0 +1,70 @@
+.pie_block {
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+.pie {
+  position:absolute;
+  width:100px;
+  height:200px;
+  overflow:hidden;
+  right:0;
+  transform-origin:left center;
+}
+.pie.big {
+  width:200px;
+  height:200px;
+  right:0;
+  transform-origin:center center;
+}
+.overflow {
+  position:absolute;
+  width:120px;
+  height:120px;
+  right: calc(50% - 60px);
+  top: calc(50% - 60px);
+  border-radius: 50%;
+  background-color: white;
+}
+
+.pie:BEFORE {
+  content:'';
+  position:absolute;
+  width:100px;
+  height:200px;
+  left:-100px;
+  border-radius:100px 0 0 100px;
+  transform-origin:right center;
+}
+.pie.big:BEFORE {
+  left:0px;
+}
+.pie.big:AFTER {
+  content:'';
+  position:absolute;
+  width:100px;
+  height:200px;
+  left:100px;
+  border-radius:0 100px 100px 0;
+}
+.pie:nth-of-type(1):BEFORE,
+.pie:nth-of-type(1):AFTER {
+  background-color:#33C4D0;
+}
+.pie::AFTER,
+.pie::BEFORE {
+  background-color:#E9EDF0;
+}
+.pie[data-start='0'] {
+  transform:rotate(0deg);
+}
+.pie[data-start='100'] {
+  transform:rotate(100deg);
+}
+.pie[data-value='100']:BEFORE {
+  transform:rotate(101deg);
+}
+.pie[data-value='260']:BEFORE {
+  transform:rotate(260deg);
+}

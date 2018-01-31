@@ -1,9 +1,9 @@
 .content {
   background: #FFC9C9;
-  padding: 21px 14px;
 }
 
 .content .content_1 {
+  margin: 21px 14px;
   font-size: 15px;
   line-height: 19px;
 }
@@ -11,3 +11,11 @@
 .content .content_1 div:first-child {
   margin-bottom: 19px;
 }
+
+.content .content_2 {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+
