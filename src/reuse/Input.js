@@ -26,7 +26,6 @@ class Input extends Component {
       credit,
       InputActions,
     } = this.props;
-    console.warn(credit);
     // const {
     //   price,
     //   time,

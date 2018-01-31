@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import Header from '../components/Header';
 import SideBar from '../components/SideBar';
 import * as appActionsTypes from '../actions/AppActions';
+import Content from '../components/Content';
 
 class App extends Component {
   constructor(props) {
@@ -36,7 +37,9 @@ class App extends Component {
             step={step}
             check_step_1={check_step_1}
           />
-          <div className='content'>BLOCK</div>
+          <Content
+            step={step}
+          />
         </div>
       </div>
     )

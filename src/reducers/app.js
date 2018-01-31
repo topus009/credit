@@ -7,7 +7,7 @@ import {
 import check_step_1 from '../helpers/check_step_1';
 
 const initialState = {
-  step: 1,
+  step: 2,
   input: {
     visible: false,
     text: '',
