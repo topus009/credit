@@ -1,19 +1,29 @@
 import React from 'react';
+import {connect} from 'react-redux';
 
 const SideStep2 = (props) => {
-  // const {
-  //   check_step_1,
-  // } = props;
+  const {
+    input,
+    credit,
+    pay,
+  } = props;
 
-  let price = '123 000';
-  let time = 120;
-  let pay_first = '9 000';
-  let pay_per_month = '3 000';
+  const {
+    text,
+  } = input;
+  const {
+    price,
+    time,
+  } = credit;
+  const {
+    pay_first,
+    pay_per_month,
+  } = pay;
 
   return (
     <div className='side_step_2'>
       <div className='step2_title'>выбранная программа
-        <div className='step2_text'>Новая программа по недвижимости</div>
+        <div className='step2_text'>{`Новая программа по ${text}`}</div>
       </div>
       <div className='step2_title'>параметры
         <div className='step2_text'>{`Сумма займа - ${price} р.`}</div>
@@ -27,4 +37,17 @@ const SideStep2 = (props) => {
   )
 };
 
-export default SideStep2;
+const mapStateToProps = (state) => {
+  const {
+    input,
+    credit,
+    pay,
+  } = state.app;
+  return {
+    input,
+    credit,
+    pay,
+  }
+};
+
+export default connect(mapStateToProps)(SideStep2);

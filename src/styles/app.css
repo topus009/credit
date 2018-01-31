@@ -1,9 +1,8 @@
-/* ========================= ГЛАВНОЕ ========================= */
 @import './global.css';
 @import './header.css';
 @import './sidebar.css';
 @import './content.css';
-/* ========================= ETS ========================= */
+
 @import './btn.css';
 @import './input.css';
 @import './pie.css';

@@ -1,32 +1,40 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import PieChart from 'react-minimal-pie-chart';
 
-class Pie extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      data: [
-        { value: 25, key: 1, color: '#32C4D1' },
-        { value: 75, key: 2, color: '#E9EDF0' },
-      ],
-    }
-  }
+const Pie = (props) => {
+  const {
+    color,
+    credit,
+    value,
+  } = props;
 
-  render() {
-    const {data} = this.state;
-    return (
-      <div className='pie_block'>
-        <PieChart
-          data={data}
-          lineWidth={50}
-          paddingAngle={2}
-          radius={48}
-          startAngle={-90}
-          totalValue={100}
-        />
-      </div>
-    )
-  }
+  const data = [
+    { value: (value / credit.price) * 100, key: 1, color },
+    { value: ((credit.price - value) / credit.price) * 100, key: 2, color: '#E9EDF0'},
+  ];
+
+  return (
+    <div className='pie_block'>
+      <PieChart
+        data={data}
+        lineWidth={50}
+        paddingAngle={2}
+        radius={48}
+        startAngle={-90}
+        totalValue={100}
+      />
+    </div>
+  )
 }
 
-export default Pie;
+const mapStateToProps = (state) => {
+  const {
+    credit,
+  } = state.app;
+  return {
+    credit,
+  }
+};
+
+export default connect(mapStateToProps)(Pie);

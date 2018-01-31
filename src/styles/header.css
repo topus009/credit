@@ -2,15 +2,12 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  /* display: flex;
-  justify-content: space-between; */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
 
 #root .header li {
   height: 91px;
-  /* flex: 1; */
   display: flex;
   justify-content: flex-end;
   align-items: center;

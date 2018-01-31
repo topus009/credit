@@ -2,10 +2,6 @@ import React from 'react';
 import SideStep2 from './SideStep2';
 
 const SideStep3 = (props) => {
-  // const {
-  //   check_step_1,
-  // } = props;
-
   return (
     <div>
       <SideStep2 />

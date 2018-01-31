@@ -9,22 +9,15 @@ import Content from '../components/Content';
 class App extends Component {
   constructor(props) {
     super(props);
-    // this.selectDay = this.selectDay.bind(this);
     this.state = {
-      // step: 0,
     }
   }
-
-  // componentDidMount() {
-
-  // }
 
   render() {
     const {
       step,
       appActions,
     } = this.props;
-    // const {} = this.state;
     const {
       check_step_1,
     } = appActions;

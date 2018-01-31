@@ -6,15 +6,9 @@ import * as InputActionsTypes from '../actions/InputActions';
 class Input extends Component {
   constructor(props) {
     super(props);
-    // this.handle_input = this.handle_input.bind(this);
     this.state = {
-      // select: '',
     }
   }
-
-  // handle_input(input_name,event) {
-
-  // }
 
   render() {
     const {
@@ -26,10 +20,6 @@ class Input extends Component {
       credit,
       InputActions,
     } = this.props;
-    // const {
-    //   price,
-    //   time,
-    // } = credit;
 
     const {
       toggle_select,
